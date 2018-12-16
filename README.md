@@ -54,3 +54,30 @@ type saftey*/
 // the return type of get method is object hence at the time of retrival we have to perform type casting
 
 ```
+
+#### Generic Class
+
+In Generic we are assosiating a type parameter to the class such type of parametrized class is nothing but Generic class or Template Classes
+
+* But in 1.5 version a generic version of Arraylist class as follows
+
+```java
+
+public class ArrayList<T> {
+ 	
+	 
+	boolean add(T t) {
+  
+        }
+
+	T get(int index){
+  
+        }
+  
+}
+
+         // T = Type Parameter
+	 // Based on our run requirement T will be replaced with our provided type
+```
+
+
