@@ -47,4 +47,14 @@
   * if X is an interface then we can call this method by passing arraylist of either X type or super class of implementation class of X.
   * But within the method we can add X type of object and null to the list.
   
+```java
 
+ArrayList< ? > al = new ArrayList< String >();                   //valid
+ArrayList< ? > al = new ArrayList< Integer >();                  //valid
+ArrayList< ? extends Number> al = new ArrayList< Integer >();    //valid
+ArrayList< ? extends Number> al = new ArrayList< String >();     //invalid
+ArrayList< ? super String> al = new ArrayList< Object >();       //valid
+ArrayList< ? > al = new ArrayList<? >();                        //invalid
+ArrayList< ? > al = new ArrayList<? extend X>();                //invalid
+
+```
