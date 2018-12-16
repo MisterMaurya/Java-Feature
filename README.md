@@ -80,4 +80,51 @@ public class ArrayList<T> {
 	 // Based on our run requirement T will be replaced with our provided type
 ```
 
+#### Bounded Types :
+* We can bound the type paratemer for a particular range by using extends keyword such type are called bounded types.
 
+```java
+
+class Test<T>
+{
+
+public static void main(String[] args) 
+{
+ Test<String> t1 = new Test<String>();
+ Test<Integer> t2 = new Test<Integer>()
+ }
+// as the type parameter we can pass any type and their are no restrictions and hence it is unbounded type
+}
+
+
+
+
+//Syntax for bounded type
+
+
+class Test<T extends X> {
+
+
+
+// X can be either class or interface
+
+// if X is a class the as the type parameter we can pass either X type or its child classes
+// if X is a interface the as the type parameter we can pass either X type or its implementation classes
+
+}
+
+
+//Example 
+
+
+class Test<T extends Number> {
+
+public static void main(String[] args) 
+{
+Test<String> t1 = new Test<String>();  // Compile Time Error : type parameter java.lang.String is not in bound
+Test<Integer> t2 = new Test<Integer>();  //correct
+
+ }
+
+}
+```
