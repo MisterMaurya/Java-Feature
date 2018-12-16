@@ -165,3 +165,22 @@ class Test<T extends Number & Thread>                // incorrect we can't exten
 // implements keyword purpose with extends keyword
 
 ```
+
+* Based on our recuriment we can declare any number of type parameter and all these parameter should be seprated with comma
+```java
+
+class Test<A,B> {
+
+}
+
+class Test<X,Y,Z> {
+
+}
+
+
+class HashMap<K,Y> {
+
+}
+//
+HashMap<Integer,String> t2 = new HashMap<Integer,String>();  //correct
+```
