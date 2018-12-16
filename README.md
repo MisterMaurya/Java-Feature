@@ -127,4 +127,41 @@ Test<Integer> t2 = new Test<Integer>();  //correct
  }
 
 }
+
+//OR
+
+class Test<T extends Runnable> {
+
+public static void main(String[] args) 
+{
+Test<Runnable> t1 = new Test<Runnable>();  //correct
+Test<Thread> t2 = new Test<Thread>();  //correct
+Test<String> t1 = new Test<String>();  // Compile Time Error : type parameter java.lang.String is not in bound
+
+ }
+
+}
+
+
+//We can define bounded types even in combination also
+
+// Example
+
+class Test<T extends Number & Runnable> {
+
+// as the type paramete we can take anything which should be child class of Number and should Runnable interface
+
+}
+
+//------------
+
+class Test<T extends Number & Runnable & Comparable> // correct
+class Test<T extends Runnable & Comparable>          // correct
+class Test<T extends  Runnable & Number >            // incorrect we can't extends class followed by an interface
+class Test<T extends Number & Thread>                // incorrect we can't extends more than two class at the same time
+
+
+// We can define bounded type  only by using extends keyword and we can't use implements and super keywords but we can replace 
+// implements keyword purpose with extends keyword
+
 ```
